@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id><![CDATA[$id$]]></id>
+    <version><![CDATA[$version$]]></version>
+    <title><![CDATA[$title$]]></title>
+    <authors><![CDATA[$author$]]></authors>
+    <owners><![CDATA[$author$]]></owners>
+    <licenseUrl><![CDATA[http://www.zmland.com]]></licenseUrl>
+    <projectUrl><![CDATA[http://www.zmland.com]]></projectUrl>
+    <iconUrl><![CDATA[http://logo.zmland.com/butterfly.png]]></iconUrl>
+    <requireLicenseAcceptance><![CDATA[false]]></requireLicenseAcceptance>
+    <description><![CDATA[$description$]]></description>
+    <releaseNotes><![CDATA[First package.]]></releaseNotes>
+    <copyright><![CDATA[Copyright 2017]]></copyright>
+    <tags><![CDATA[MoonSharp Extension]]></tags>
+  </metadata>
+</package>

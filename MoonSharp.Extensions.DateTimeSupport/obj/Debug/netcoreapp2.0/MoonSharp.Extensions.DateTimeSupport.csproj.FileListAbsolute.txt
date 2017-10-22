@@ -1,0 +1,11 @@
+D:\TFS Projects\zmland.com\OpenSources\MoonSharp.Extensions\MoonSharp.Extensions.DateTimeSupport\bin\Debug\netcoreapp2.0\MoonSharp.Extensions.DateTimeSupport.deps.json
+D:\TFS Projects\zmland.com\OpenSources\MoonSharp.Extensions\MoonSharp.Extensions.DateTimeSupport\bin\Debug\netcoreapp2.0\MoonSharp.Extensions.DateTimeSupport.dll
+D:\TFS Projects\zmland.com\OpenSources\MoonSharp.Extensions\MoonSharp.Extensions.DateTimeSupport\bin\Debug\netcoreapp2.0\MoonSharp.Extensions.DateTimeSupport.pdb
+D:\TFS Projects\zmland.com\OpenSources\MoonSharp.Extensions\MoonSharp.Extensions.DateTimeSupport\bin\Debug\netcoreapp2.0\MoonSharp.Extensions.dll
+D:\TFS Projects\zmland.com\OpenSources\MoonSharp.Extensions\MoonSharp.Extensions.DateTimeSupport\bin\Debug\netcoreapp2.0\MoonSharp.Extensions.pdb
+D:\TFS Projects\zmland.com\OpenSources\MoonSharp.Extensions\MoonSharp.Extensions.DateTimeSupport\obj\Debug\netcoreapp2.0\MoonSharp.Extensions.DateTimeSupport.csprojResolveAssemblyReference.cache
+D:\TFS Projects\zmland.com\OpenSources\MoonSharp.Extensions\MoonSharp.Extensions.DateTimeSupport\obj\Debug\netcoreapp2.0\MoonSharp.Extensions.DateTimeSupport.csproj.CoreCompileInputs.cache
+D:\TFS Projects\zmland.com\OpenSources\MoonSharp.Extensions\MoonSharp.Extensions.DateTimeSupport\obj\Debug\netcoreapp2.0\MoonSharp.Extensions.DateTimeSupport.AssemblyInfoInputs.cache
+D:\TFS Projects\zmland.com\OpenSources\MoonSharp.Extensions\MoonSharp.Extensions.DateTimeSupport\obj\Debug\netcoreapp2.0\MoonSharp.Extensions.DateTimeSupport.AssemblyInfo.cs
+D:\TFS Projects\zmland.com\OpenSources\MoonSharp.Extensions\MoonSharp.Extensions.DateTimeSupport\obj\Debug\netcoreapp2.0\MoonSharp.Extensions.DateTimeSupport.dll
+D:\TFS Projects\zmland.com\OpenSources\MoonSharp.Extensions\MoonSharp.Extensions.DateTimeSupport\obj\Debug\netcoreapp2.0\MoonSharp.Extensions.DateTimeSupport.pdb
