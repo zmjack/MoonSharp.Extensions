@@ -15,8 +15,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoonSharp.Extensions.Chines
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppCore", "Samples.ConsoleAppCore\ConsoleAppCore.csproj", "{5A0DD8B3-430C-43AC-9A6E-21F4BD251A83}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Securite", "Securite", "{E2733317-BB61-435F-8E0D-F2A4F47CD2B2}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
