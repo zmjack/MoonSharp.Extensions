@@ -15,6 +15,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoonSharp.Extensions.Chines
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppCore", "Samples.ConsoleAppCore\ConsoleAppCore.csproj", "{5A0DD8B3-430C-43AC-9A6E-21F4BD251A83}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_private", "_private", "{6573E93C-D6D5-4178-ADDA-DA09C3EEC56B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_ConsoleAppCore", "_private\_ConsoleAppCore\_ConsoleAppCore.csproj", "{06CF67D8-4B76-4433-9FB7-0842629AD47D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,14 +45,45 @@ Global
 		{5A0DD8B3-430C-43AC-9A6E-21F4BD251A83}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A0DD8B3-430C-43AC-9A6E-21F4BD251A83}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A0DD8B3-430C-43AC-9A6E-21F4BD251A83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06CF67D8-4B76-4433-9FB7-0842629AD47D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06CF67D8-4B76-4433-9FB7-0842629AD47D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06CF67D8-4B76-4433-9FB7-0842629AD47D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06CF67D8-4B76-4433-9FB7-0842629AD47D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{5A0DD8B3-430C-43AC-9A6E-21F4BD251A83} = {4D6EA49F-7F00-438E-87E1-4604B109EA5F}
+		{06CF67D8-4B76-4433-9FB7-0842629AD47D} = {6573E93C-D6D5-4178-ADDA-DA09C3EEC56B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F2C53535-27EF-45EA-BE1C-7AA01125FA2B}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://tfs.zmland.com:8080/tfs/zmland.com
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = MoonSharp.Extensions\\MoonSharp.Extensions.csproj
+		SccProjectName1 = MoonSharp.Extensions
+		SccLocalPath1 = MoonSharp.Extensions
+		SccProjectUniqueName2 = MoonSharp.Extensions.WebSupport\\MoonSharp.Extensions.WebSupport.csproj
+		SccProjectName2 = MoonSharp.Extensions.WebSupport
+		SccLocalPath2 = MoonSharp.Extensions.WebSupport
+		SccProjectUniqueName3 = MoonSharp.Extensions.DateTimeSupport\\MoonSharp.Extensions.DateTimeSupport.csproj
+		SccProjectName3 = MoonSharp.Extensions.DateTimeSupport
+		SccLocalPath3 = MoonSharp.Extensions.DateTimeSupport
+		SccProjectUniqueName4 = MoonSharp.Extensions.ChineseCalendarSupport\\MoonSharp.Extensions.ChineseCalendarSupport.csproj
+		SccProjectName4 = MoonSharp.Extensions.ChineseCalendarSupport
+		SccLocalPath4 = MoonSharp.Extensions.ChineseCalendarSupport
+		SccProjectUniqueName5 = Samples.ConsoleAppCore\\ConsoleAppCore.csproj
+		SccProjectTopLevelParentUniqueName5 = MoonSharp.Extensions.sln
+		SccProjectName5 = Samples.ConsoleAppCore
+		SccLocalPath5 = Samples.ConsoleAppCore
+		SccProjectUniqueName6 = _private\\_ConsoleAppCore\\_ConsoleAppCore.csproj
+		SccProjectTopLevelParentUniqueName6 = MoonSharp.Extensions.sln
+		SccProjectName6 = _private/_ConsoleAppCore
+		SccLocalPath6 = _private\\_ConsoleAppCore
 	EndGlobalSection
 EndGlobal
