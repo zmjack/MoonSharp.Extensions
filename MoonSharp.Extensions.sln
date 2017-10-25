@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2005
+VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoonSharp.Extensions", "MoonSharp.Extensions\MoonSharp.Extensions.csproj", "{6C02AC8D-FEAB-4746-AFA6-1F9A7BC23727}"
 EndProject
@@ -14,6 +14,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoonSharp.Extensions.ChineseCalendarSupport", "MoonSharp.Extensions.ChineseCalendarSupport\MoonSharp.Extensions.ChineseCalendarSupport.csproj", "{98BB1D3A-2440-4413-8D3C-7F43B548BC89}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppCore", "Samples.ConsoleAppCore\ConsoleAppCore.csproj", "{5A0DD8B3-430C-43AC-9A6E-21F4BD251A83}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Securite", "Securite", "{E2733317-BB61-435F-8E0D-F2A4F47CD2B2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -50,27 +52,5 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F2C53535-27EF-45EA-BE1C-7AA01125FA2B}
-	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 6
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = http://tfs.zmland.com:8080/tfs/zmland.com
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = MoonSharp.Extensions\\MoonSharp.Extensions.csproj
-		SccProjectName1 = MoonSharp.Extensions
-		SccLocalPath1 = MoonSharp.Extensions
-		SccProjectUniqueName2 = MoonSharp.Extensions.WebSupport\\MoonSharp.Extensions.WebSupport.csproj
-		SccProjectName2 = MoonSharp.Extensions.WebSupport
-		SccLocalPath2 = MoonSharp.Extensions.WebSupport
-		SccProjectUniqueName3 = MoonSharp.Extensions.DateTimeSupport\\MoonSharp.Extensions.DateTimeSupport.csproj
-		SccProjectName3 = MoonSharp.Extensions.DateTimeSupport
-		SccLocalPath3 = MoonSharp.Extensions.DateTimeSupport
-		SccProjectUniqueName4 = MoonSharp.Extensions.ChineseCalendarSupport\\MoonSharp.Extensions.ChineseCalendarSupport.csproj
-		SccProjectName4 = MoonSharp.Extensions.ChineseCalendarSupport
-		SccLocalPath4 = MoonSharp.Extensions.ChineseCalendarSupport
-		SccProjectUniqueName5 = Samples.ConsoleAppCore\\ConsoleAppCore.csproj
-		SccProjectTopLevelParentUniqueName5 = MoonSharp.Extensions.sln
-		SccProjectName5 = Samples.ConsoleAppCore
-		SccLocalPath5 = Samples.ConsoleAppCore
 	EndGlobalSection
 EndGlobal

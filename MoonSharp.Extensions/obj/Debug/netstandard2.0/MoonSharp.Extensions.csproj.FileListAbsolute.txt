@@ -1,9 +1,0 @@
-D:\TFS Projects\zmland.com\OpenSources\MoonSharp.Extensions\MoonSharp.Extensions\bin\Debug\netstandard2.0\MoonSharp.Extensions.deps.json
-D:\TFS Projects\zmland.com\OpenSources\MoonSharp.Extensions\MoonSharp.Extensions\bin\Debug\netstandard2.0\MoonSharp.Extensions.dll
-D:\TFS Projects\zmland.com\OpenSources\MoonSharp.Extensions\MoonSharp.Extensions\bin\Debug\netstandard2.0\MoonSharp.Extensions.pdb
-D:\TFS Projects\zmland.com\OpenSources\MoonSharp.Extensions\MoonSharp.Extensions\obj\Debug\netstandard2.0\MoonSharp.Extensions.csprojResolveAssemblyReference.cache
-D:\TFS Projects\zmland.com\OpenSources\MoonSharp.Extensions\MoonSharp.Extensions\obj\Debug\netstandard2.0\MoonSharp.Extensions.csproj.CoreCompileInputs.cache
-D:\TFS Projects\zmland.com\OpenSources\MoonSharp.Extensions\MoonSharp.Extensions\obj\Debug\netstandard2.0\MoonSharp.Extensions.AssemblyInfoInputs.cache
-D:\TFS Projects\zmland.com\OpenSources\MoonSharp.Extensions\MoonSharp.Extensions\obj\Debug\netstandard2.0\MoonSharp.Extensions.AssemblyInfo.cs
-D:\TFS Projects\zmland.com\OpenSources\MoonSharp.Extensions\MoonSharp.Extensions\obj\Debug\netstandard2.0\MoonSharp.Extensions.dll
-D:\TFS Projects\zmland.com\OpenSources\MoonSharp.Extensions\MoonSharp.Extensions\obj\Debug\netstandard2.0\MoonSharp.Extensions.pdb

@@ -15,7 +15,7 @@ namespace MoonSharp.Extensions
         [LuaFunction("zh-CN", "访问web。f(URL, 传送数据, 客户端配置[" +
             "'enctype', 'content-type', 'user-agent', 'nobody', 'method', 'encoding', " +
             "'proxy_address', 'proxy_username', 'proxy_password'])")]
-        public static string Visit(string url, Dictionary<string, string> updata, Dictionary<string, string> config)
+        public static string Go(string url, Dictionary<string, string> updata, Dictionary<string, string> config)
         {
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
 
