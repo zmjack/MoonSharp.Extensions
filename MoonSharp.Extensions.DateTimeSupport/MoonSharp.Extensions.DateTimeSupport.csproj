@@ -8,11 +8,10 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>zmjack</Authors>
-    <RootNamespace>MoonSharp.Extensions</RootNamespace>
-    <Version>1.0.1</Version>
+    <Version>1.0.1.1</Version>
   </PropertyGroup>
 
   <ItemGroup>

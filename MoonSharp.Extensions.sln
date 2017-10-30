@@ -17,7 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppCore", "Samples.C
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_private", "_private", "{6573E93C-D6D5-4178-ADDA-DA09C3EEC56B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_ConsoleAppCore", "_private\_ConsoleAppCore\_ConsoleAppCore.csproj", "{06CF67D8-4B76-4433-9FB7-0842629AD47D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_ConsoleAppCore", "_private\_ConsoleAppCore\_ConsoleAppCore.csproj", "{06CF67D8-4B76-4433-9FB7-0842629AD47D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoonSharp.Extensions.EmailSupport", "MoonSharp.Extensions.EmailSupport\MoonSharp.Extensions.EmailSupport.csproj", "{1EEF3963-BA4D-4793-B866-C1350C9CA600}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +51,10 @@ Global
 		{06CF67D8-4B76-4433-9FB7-0842629AD47D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06CF67D8-4B76-4433-9FB7-0842629AD47D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06CF67D8-4B76-4433-9FB7-0842629AD47D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EEF3963-BA4D-4793-B866-C1350C9CA600}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EEF3963-BA4D-4793-B866-C1350C9CA600}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EEF3963-BA4D-4793-B866-C1350C9CA600}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EEF3963-BA4D-4793-B866-C1350C9CA600}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -61,7 +67,7 @@ Global
 		SolutionGuid = {F2C53535-27EF-45EA-BE1C-7AA01125FA2B}
 	EndGlobalSection
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 7
+		SccNumberOfProjects = 8
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = http://tfs.zmland.com:8080/tfs/zmland.com
 		SccLocalPath0 = .
@@ -85,5 +91,8 @@ Global
 		SccProjectTopLevelParentUniqueName6 = MoonSharp.Extensions.sln
 		SccProjectName6 = _private/_ConsoleAppCore
 		SccLocalPath6 = _private\\_ConsoleAppCore
+		SccProjectUniqueName7 = MoonSharp.Extensions.EmailSupport\\MoonSharp.Extensions.EmailSupport.csproj
+		SccProjectName7 = MoonSharp.Extensions.EmailSupport
+		SccLocalPath7 = MoonSharp.Extensions.EmailSupport
 	EndGlobalSection
 EndGlobal
