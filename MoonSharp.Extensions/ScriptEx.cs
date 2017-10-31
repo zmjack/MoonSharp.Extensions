@@ -39,7 +39,7 @@ namespace MoonSharp.Extensions
                 culture = CultureInfo.CurrentUICulture.ToString();
 
             Console.WriteLine(typeof(TLuaSupport).Name + " Functions:");
-            supportInstance.DumpSupport(culture);
+            Console.Write(supportInstance.DumpSupport(culture));
         }
 
         public static void DumpMethod<TLuaSupport>(this Script @this, string methodName, string culture = null)
@@ -49,7 +49,7 @@ namespace MoonSharp.Extensions
             if (culture == null)
                 culture = CultureInfo.CurrentUICulture.ToString();
 
-            supportInstance.DumpMethod(methodName, culture);
+            Console.Write(supportInstance.DumpMethod(methodName, culture));
         }
 
     }

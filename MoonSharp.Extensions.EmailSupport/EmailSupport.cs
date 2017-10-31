@@ -10,9 +10,9 @@ namespace MoonSharp.Extensions
     public class EmailSupport : LuaSupport
     {
         [LuaFunction("en-US", "Send Email. f()")]
-        [LuaFunction("zh-CN", "发送邮件。f(客户端配置[host,port,username,password,timeout,ssl]," +
-            "邮件[from,to(;),cc(;),bcc(;),subject,subjectencoding,body,bodyencoding,isbodyhtml,priority(0n,1l,2h)])")]
-        public string Send(Dictionary<string, string> client, Dictionary<string, string> email)
+        [LuaFunction("zh-CN", "发送邮件。f(客户端配置[host, port, username, password, timeout, ssl]," +
+            "邮件[from, to(;), cc(;), bcc(;), subject, subjectencoding, body, bodyencoding, isbodyhtml, priority(0n,1l,2h)])")]
+        public static string Send(Dictionary<string, string> client, Dictionary<string, string> email)
         {
             try
             {

@@ -19,52 +19,18 @@ namespace MoonSharp.Extensions
         }
         public LuaSupport() { }
 
+        private BindingFlags FindBindingFlags = BindingFlags.Public | BindingFlags.Instance | BindingFlags.Static | BindingFlags.IgnoreCase;
+
         private IEnumerable<(LuaFunctionAttribute Attribute, MethodInfo ReflectObject)> EnumMethodDefinitions(string culture)
         {
             return GetType()
-                .GetMethods()
+                .GetMethods(FindBindingFlags)
                 .Where(method => method.GetCustomAttributes<LuaFunctionAttribute>(false).Any())
-                .Select(method =>
-                {
-                    var attrs = method.GetCustomAttributes<LuaFunctionAttribute>(false);
-                    var currentAttr = attrs.SingleOrDefault(attr => attr.Culture == culture);
-                    if (currentAttr == null)
-                    {
-                        currentAttr = attrs.First();
-                    }
-
-                    return (currentAttr, method);
-                });
+                .Select(method => Get_Attribute_ReflectObject(method, culture));
         }
 
-        public void Dump((LuaFunctionAttribute Attribute, MethodInfo ReflectObject) x)
+        private (LuaFunctionAttribute Attribute, MethodInfo ReflectObject) Get_Attribute_ReflectObject(MethodInfo method, string culture)
         {
-            var name = x.ReflectObject.Name;
-            var usage = x.Attribute.Usage;
-            var methodInfo = x.ReflectObject.ToString();
-
-            Console.WriteLine($"+ {name}");
-            Console.WriteLine($"  - {methodInfo}");
-            if (!string.IsNullOrEmpty(usage))
-            {
-                Console.WriteLine($"  {usage}");
-            }
-        }
-
-        public void DumpSupport(string culture)
-        {
-            var definitions = EnumMethodDefinitions(culture);
-
-            foreach (var definition in definitions)
-            {
-                Dump(definition);
-            }
-        }
-
-        public void DumpMethod(string methodName, string culture)
-        {
-            var method = GetType().GetMethod(methodName);
-
             var attrs = method.GetCustomAttributes<LuaFunctionAttribute>(false);
             var currentAttr = attrs.SingleOrDefault(attr => attr.Culture == culture);
             if (currentAttr == null)
@@ -72,7 +38,55 @@ namespace MoonSharp.Extensions
                 currentAttr = attrs.First();
             }
 
-            Dump((currentAttr, method));
+            return (currentAttr, method);
+        }
+
+        private string Dump((LuaFunctionAttribute Attribute, MethodInfo ReflectObject) x)
+        {
+            var name = x.ReflectObject.Name;
+            var usage = x.Attribute.Usage;
+            var methodInfo = x.ReflectObject.ToString();
+            var stringBuilder = new StringBuilder(256);
+
+            stringBuilder.AppendLine($"+ {name}");
+            stringBuilder.AppendLine($"  - {methodInfo}");
+            if (!string.IsNullOrEmpty(usage))
+            {
+                stringBuilder.AppendLine($"  {usage}");
+            }
+
+            return stringBuilder.ToString();
+        }
+
+        public string DumpMethod(string methodName, string culture)
+        {
+            var method = GetType().GetMethod(methodName, FindBindingFlags);
+            return Dump(Get_Attribute_ReflectObject(method, culture));
+        }
+
+        public string DumpSupport(string culture)
+        {
+            var definitions = EnumMethodDefinitions(culture);
+            var stringBuilder = new StringBuilder(256);
+
+            foreach (var definition in definitions)
+            {
+                stringBuilder.Append(Dump(definition));
+            }
+            stringBuilder.AppendLine();
+
+            return stringBuilder.ToString();
+        }
+
+        public string Dump(string methodName = null)
+        {
+            var culture = CultureInfo.CurrentUICulture.ToString();
+
+            if (string.IsNullOrEmpty(methodName))
+            {
+                return GetType().Name + " Functions:\r\n" + DumpSupport(culture);
+            }
+            else return DumpMethod(methodName, culture);
         }
 
     }
