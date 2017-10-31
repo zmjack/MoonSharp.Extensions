@@ -16,14 +16,12 @@ namespace MoonSharp.Extensions
         {
             try
             {
-                Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
-
                 //Client
                 var host = Config.Get(client, "host", "");
-                var port = Config.Get(client, "port", 0);
+                var port = Config.Get(client, "port", 25);
                 var username = Config.Get(client, "username", "");
                 var password = Config.Get(client, "password", "");
-                var timeout = Config.Get(client, "timeout", 0);
+                var timeout = Config.Get(client, "timeout", 100000);
                 var ssl = Config.Get(client, "ssl", false);
 
                 var smtpClient = new SmtpClient()
@@ -42,10 +40,10 @@ namespace MoonSharp.Extensions
                 var bcc = Config.Get(email, "bcc", "").Split(';').Select(a => a.Trim());
                 var subject = Config.Get(email, "subject", "");
                 var subjectEncoding = Encoding.GetEncoding(
-                    Config.Get(email, "subjectencoding", "gb2312"));
+                    Config.Get(email, "subjectencoding", "utf-8"));
                 var body = Config.Get(email, "body", "");
                 var bodyEncoding = Encoding.GetEncoding(
-                    Config.Get(email, "bodyEncoding", "utf8"));
+                    Config.Get(email, "bodyEncoding", "utf-8"));
                 var isbodyhtml = Config.Get(email, "isbodyhtml", true);
                 var priority = Config.Get(email, "priority", MailPriority.Normal);
 

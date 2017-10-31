@@ -29,7 +29,7 @@ namespace MoonSharp.Extensions
                 var userAgent = Config.Get(config, "user-agent", "");
                 var nobody = Config.Get(config, "nobody", @default: false);
                 var method = Config.Get(config, "method", "get");
-                var encoding = Encoding.GetEncoding(Config.Get(config, "encoding", "utf8"));
+                var encoding = Encoding.GetEncoding(Config.Get(config, "encoding", "utf-8"));
                 var proxy_address = Config.Get(config, "proxy_address", "");
                 var proxy_username = Config.Get(config, "proxy_username", "");
                 var proxy_password = Config.Get(config, "proxy_password", "");

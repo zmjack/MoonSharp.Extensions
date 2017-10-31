@@ -17,7 +17,9 @@ namespace MoonSharp.Extensions
         {
             if (new T() is Enum)
             {
-                return (T)Enum.ToObject(typeof(T), int.Parse(configTable[key]));
+                if (configTable.ContainsKey(key))
+                    return (T)Enum.ToObject(typeof(T), int.Parse(configTable[key]));
+                else return @default;
             }
 
             if (configTable.ContainsKey(key))
