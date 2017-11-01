@@ -11,7 +11,7 @@ namespace MoonSharp.Extensions
 {
     public static class ScriptEx
     {
-        public static DynValue Invoke(this Script @this, string function, params object[] args)
+        public static DynValue CallFunction(this Script @this, string function, params object[] args)
         {
             return @this.Call(@this.Globals[function], args);
         }
