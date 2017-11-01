@@ -36,8 +36,8 @@ namespace MoonSharp.Extensions
                 //Email
                 var from = Config.Get(email, "from", "");
                 var to = Config.Get(email, "to", "").Split(';').Select(a => a.Trim());
-                var cc = Config.Get(email, "cc", "").Split(';').Select(a => a.Trim());
-                var bcc = Config.Get(email, "bcc", "").Split(';').Select(a => a.Trim());
+                var cc = Config.Get(email, "cc", null)?.Split(';').Select(a => a.Trim()) ?? new string[0];
+                var bcc = Config.Get(email, "bcc", null)?.Split(';').Select(a => a.Trim()) ?? new string[0];
                 var subject = Config.Get(email, "subject", "");
                 var subjectEncoding = Encoding.GetEncoding(
                     Config.Get(email, "subjectencoding", "utf-8"));
@@ -58,25 +58,16 @@ namespace MoonSharp.Extensions
                     Priority = priority,
                 };
 
-                if (email.ContainsKey("to"))
-                {
-                    foreach (var address in to)
-                        mail.To.Add(address);
-                }
-                if (email.ContainsKey("cc"))
-                {
-                    foreach (var address in cc)
-                        mail.CC.Add(address);
-                }
-                if (email.ContainsKey("bcc"))
-                {
-                    foreach (var address in bcc)
-                        mail.Bcc.Add(address);
-                }
+                foreach (var address in to)
+                    mail.To.Add(address);
+                foreach (var address in cc)
+                    mail.CC.Add(address);
+                foreach (var address in bcc)
+                    mail.Bcc.Add(address);
 
                 smtpClient.Send(mail);
 
-                return "";
+                return "Success";
             }
             catch (Exception ex) { return $"Exception: {ex.Message}"; }
         }
