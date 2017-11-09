@@ -21,7 +21,7 @@ namespace MoonSharp.Extensions
                 var port = Config.Get(client, "port", 25);
                 var username = Config.Get(client, "username", "");
                 var password = Config.Get(client, "password", "");
-                var timeout = Config.Get(client, "timeout", 100000);
+                var timeout = Config.Get(client, "timeout", 10);
                 var ssl = Config.Get(client, "ssl", false);
 
                 var smtpClient = new SmtpClient()
