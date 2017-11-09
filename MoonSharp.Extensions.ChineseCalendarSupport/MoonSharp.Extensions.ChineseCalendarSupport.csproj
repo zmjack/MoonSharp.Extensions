@@ -11,7 +11,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>zmjack</Authors>
-    <Version>1.0.2.0</Version>
+    <Version>1.0.3</Version>
   </PropertyGroup>
 
   <ItemGroup>

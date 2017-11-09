@@ -12,7 +12,7 @@ namespace MoonSharp.Extensions
         [LuaFunction("en-US", "Send Email. f()")]
         [LuaFunction("zh-CN", "发送邮件。f(客户端配置[host, port, username, password, timeout, ssl]," +
             "邮件[from, to(;), cc(;), bcc(;), subject, subjectencoding, body, bodyencoding, isbodyhtml, priority(0n,1l,2h)])")]
-        public static string Send(Dictionary<string, string> client, Dictionary<string, string> email)
+        public static string Send(Dictionary<string, object> client, Dictionary<string, object> email)
         {
             try
             {
@@ -35,9 +35,12 @@ namespace MoonSharp.Extensions
 
                 //Email
                 var from = Config.Get(email, "from", "");
-                var to = Config.Get(email, "to", "").Split(';').Select(a => a.Trim());
-                var cc = Config.Get(email, "cc", null)?.Split(';').Select(a => a.Trim()) ?? new string[0];
-                var bcc = Config.Get(email, "bcc", null)?.Split(';').Select(a => a.Trim()) ?? new string[0];
+                var to = Config.Get(email, "to", "").Split(';').Select(a => a.Trim())
+                    .Where(a => !string.IsNullOrEmpty(a));
+                var cc = (Config.Get(email, "cc", null)?.Split(';').Select(a => a.Trim()) ?? new string[0])
+                    .Where(a => !string.IsNullOrEmpty(a));
+                var bcc = Config.Get(email, "bcc", null)?.Split(';').Select(a => a.Trim()) ?? new string[0]
+                    .Where(a => !string.IsNullOrEmpty(a));
                 var subject = Config.Get(email, "subject", "");
                 var subjectEncoding = Encoding.GetEncoding(
                     Config.Get(email, "subjectencoding", "utf-8"));

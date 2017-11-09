@@ -15,7 +15,7 @@ namespace MoonSharp.Extensions
         [LuaFunction("zh-CN", "访问web。f(URL, 传送数据, 客户端配置[" +
             "'enctype', 'content-type', 'user-agent', 'nobody', 'method', 'encoding', " +
             "'proxy_address', 'proxy_username', 'proxy_password'])")]
-        public static string Go(string url, Dictionary<string, string> updata, Dictionary<string, string> config)
+        public static string Go(string url, Dictionary<string, object> updata, Dictionary<string, object> config)
         {
             try
             {
@@ -40,7 +40,7 @@ namespace MoonSharp.Extensions
                     var postDataList = new List<string>();
                     foreach (var data in updata)
                     {
-                        postDataList.Add($"{data.Key}={HttpUtility.UrlEncode(data.Value)}");
+                        postDataList.Add($"{data.Key}={HttpUtility.UrlEncode(data.Value.ToString())}");
                     }
                     requestBody = Encoding.UTF8.GetBytes(string.Join("&", postDataList));
                 }
@@ -50,7 +50,7 @@ namespace MoonSharp.Extensions
                     var formData = new HttpFormData();
                     foreach (var data in updata)
                     {
-                        formData.AddData(data.Key, data.Value);
+                        formData.AddData(data.Key, data.Value.ToString());
                     }
                     requestBody = formData;
                 }
