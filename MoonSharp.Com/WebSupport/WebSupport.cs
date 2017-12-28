@@ -12,7 +12,7 @@ namespace MoonSharp.Extensions
         [LuaFunction("en-US", "Visit web。f(URL, updata, config[" +
             "'enctype', 'content-type', 'user-agent', 'nobody', 'method', 'encoding', " +
             "'proxy_address', 'proxy_username', 'proxy_password'])")]
-        [LuaFunction("zh-CN", "访问web。f(URL, 传送数据, 客户端配置[" +
+        [LuaFunction("zh-CN", "访问web资源。f(URL, 传送数据, 客户端配置[" +
             "'enctype', 'content-type', 'user-agent', 'nobody', 'method', 'encoding', " +
             "'proxy_address', 'proxy_username', 'proxy_password'])")]
         public static string Go(string url, Dictionary<string, object> updata, Dictionary<string, object> config)
@@ -36,7 +36,7 @@ namespace MoonSharp.Extensions
 
                 if (enctype != "multipart/form-data")
                 {
-                    //Format: default
+                    //Format: application/x-www-form-urlencoded
                     var postDataList = new List<string>();
                     foreach (var data in updata)
                     {
@@ -76,7 +76,7 @@ namespace MoonSharp.Extensions
                 }
 
                 //Invoke
-                if (!nobody)
+                if (method == "post" && !nobody)
                     request.GetRequestStream().Write(requestBody, 0, requestBody.Length);
 
                 using (var response = request.GetResponse())

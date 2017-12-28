@@ -9,17 +9,15 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <RootNamespace>MoonSharp.Extensions</RootNamespace>
+    <AssemblyName>MoonSharp.Com.SecuritySupport</AssemblyName>
+    <Version>0.0.0.1</Version>
     <Authors>zmjack</Authors>
-    <Version>1.0.4</Version>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <LangVersion>default</LangVersion>
+    <Company>zmjack</Company>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MoonSharp" Version="2.0.0" />
+    <ProjectReference Include="..\..\MoonSharp.Extensions\MoonSharp.Extensions.csproj" />
   </ItemGroup>
 
 </Project>

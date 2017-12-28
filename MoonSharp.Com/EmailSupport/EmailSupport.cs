@@ -35,7 +35,7 @@ namespace MoonSharp.Extensions
 
                 //Email
                 var from = Config.Get(email, "from", "");
-                var to = Config.Get(email, "to", "").Split(';').Select(a => a.Trim())
+                var to = (Config.Get(email, "to", null).Split(';').Select(a => a.Trim()) ?? new string[0])
                     .Where(a => !string.IsNullOrEmpty(a));
                 var cc = (Config.Get(email, "cc", null)?.Split(';').Select(a => a.Trim()) ?? new string[0])
                     .Where(a => !string.IsNullOrEmpty(a));

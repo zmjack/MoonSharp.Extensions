@@ -9,15 +9,24 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>MoonSharp.Com.ArraySupport</AssemblyName>
     <RootNamespace>MoonSharp.Extensions</RootNamespace>
-    <Version>1.0.3</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>0.0.0.1</Version>
     <Authors>zmjack</Authors>
     <Company>zmjack</Company>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
   <ItemGroup>
-    <ProjectReference Include="..\MoonSharp.Extensions\MoonSharp.Extensions.csproj" />
+    <ProjectReference Include="..\..\MoonSharp.Extensions\MoonSharp.Extensions.csproj" />
   </ItemGroup>
 
 </Project>

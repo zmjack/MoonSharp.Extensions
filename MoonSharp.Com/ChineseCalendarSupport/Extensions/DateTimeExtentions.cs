@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.Text;
 
 namespace MoonSharp.Extensions
 {
-    public static class DateTimeEx
+    public static class ChineseCalendarSupport_DateTimeExtentions
     {
         private static ChineseLunisolarCalendar _Calendar = new ChineseLunisolarCalendar();
 

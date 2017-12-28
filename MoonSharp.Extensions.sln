@@ -1,25 +1,37 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.16
+VisualStudioVersion = 15.0.27130.2003
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoonSharp.Extensions", "MoonSharp.Extensions\MoonSharp.Extensions.csproj", "{6C02AC8D-FEAB-4746-AFA6-1F9A7BC23727}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{4D6EA49F-7F00-438E-87E1-4604B109EA5F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoonSharp.Extensions.WebSupport", "MoonSharp.Extensions.WebSupport\MoonSharp.Extensions.WebSupport.csproj", "{73B701C2-8AE5-41C1-B3AF-B64DC1BF992D}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoonSharp.Extensions.DateTimeSupport", "MoonSharp.Extensions.DateTimeSupport\MoonSharp.Extensions.DateTimeSupport.csproj", "{E670B0FA-E82B-4BC9-B0AB-E69E8E83C391}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoonSharp.Extensions.ChineseCalendarSupport", "MoonSharp.Extensions.ChineseCalendarSupport\MoonSharp.Extensions.ChineseCalendarSupport.csproj", "{98BB1D3A-2440-4413-8D3C-7F43B548BC89}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppCore", "Samples.ConsoleAppCore\ConsoleAppCore.csproj", "{5A0DD8B3-430C-43AC-9A6E-21F4BD251A83}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_private", "_private", "{6573E93C-D6D5-4178-ADDA-DA09C3EEC56B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_ConsoleAppCore", "_private\_ConsoleAppCore\_ConsoleAppCore.csproj", "{06CF67D8-4B76-4433-9FB7-0842629AD47D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoonSharp.Extensions.EmailSupport", "MoonSharp.Extensions.EmailSupport\MoonSharp.Extensions.EmailSupport.csproj", "{1EEF3963-BA4D-4793-B866-C1350C9CA600}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MoonSharp.Com", "MoonSharp.Com", "{DDFE4B0F-61F9-49CC-A032-8F876B9D4F86}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{5445CA39-70C2-4AEE-81AF-301E80DCBAC6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArraySupportTest", "UnitTests\ArraySupportTest\ArraySupportTest.csproj", "{30B0D4E1-2A4D-4524-9CAC-EEE7CD7B826F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SecuritySupportTest", "UnitTests\SecuritySupportTest\SecuritySupportTest.csproj", "{F938D3A3-2328-49BD-9CF4-EE5D6B238396}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppCore", "Samples\ConsoleAppCore\ConsoleAppCore.csproj", "{9B73E453-2DDF-4784-971E-84017BC7F976}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArraySupport", "MoonSharp.Com\ArraySupport\ArraySupport.csproj", "{D6E4E28B-55AF-484F-8408-871F024E01C1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChineseCalendarSupport", "MoonSharp.Com\ChineseCalendarSupport\ChineseCalendarSupport.csproj", "{32F7FBE8-B9E6-4973-AA8D-5DF12617EAA6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DateTimeSupport", "MoonSharp.Com\DateTimeSupport\DateTimeSupport.csproj", "{710BD24E-2349-465C-BF57-A81199935D7E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmailSupport", "MoonSharp.Com\EmailSupport\EmailSupport.csproj", "{EF8BA450-83BE-465E-B0B9-BF9B82B9A599}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SecuritySupport", "MoonSharp.Com\SecuritySupport\SecuritySupport.csproj", "{E5BADE86-C64A-4C11-8FCD-C071E620DC74}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebSupport", "MoonSharp.Com\WebSupport\WebSupport.csproj", "{D953FCB2-1730-4E7A-9990-92ACA6FBB1E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,68 +43,112 @@ Global
 		{6C02AC8D-FEAB-4746-AFA6-1F9A7BC23727}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C02AC8D-FEAB-4746-AFA6-1F9A7BC23727}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C02AC8D-FEAB-4746-AFA6-1F9A7BC23727}.Release|Any CPU.Build.0 = Release|Any CPU
-		{73B701C2-8AE5-41C1-B3AF-B64DC1BF992D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{73B701C2-8AE5-41C1-B3AF-B64DC1BF992D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{73B701C2-8AE5-41C1-B3AF-B64DC1BF992D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{73B701C2-8AE5-41C1-B3AF-B64DC1BF992D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E670B0FA-E82B-4BC9-B0AB-E69E8E83C391}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E670B0FA-E82B-4BC9-B0AB-E69E8E83C391}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E670B0FA-E82B-4BC9-B0AB-E69E8E83C391}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E670B0FA-E82B-4BC9-B0AB-E69E8E83C391}.Release|Any CPU.Build.0 = Release|Any CPU
-		{98BB1D3A-2440-4413-8D3C-7F43B548BC89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{98BB1D3A-2440-4413-8D3C-7F43B548BC89}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{98BB1D3A-2440-4413-8D3C-7F43B548BC89}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{98BB1D3A-2440-4413-8D3C-7F43B548BC89}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5A0DD8B3-430C-43AC-9A6E-21F4BD251A83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5A0DD8B3-430C-43AC-9A6E-21F4BD251A83}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5A0DD8B3-430C-43AC-9A6E-21F4BD251A83}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5A0DD8B3-430C-43AC-9A6E-21F4BD251A83}.Release|Any CPU.Build.0 = Release|Any CPU
 		{06CF67D8-4B76-4433-9FB7-0842629AD47D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{06CF67D8-4B76-4433-9FB7-0842629AD47D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06CF67D8-4B76-4433-9FB7-0842629AD47D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06CF67D8-4B76-4433-9FB7-0842629AD47D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1EEF3963-BA4D-4793-B866-C1350C9CA600}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1EEF3963-BA4D-4793-B866-C1350C9CA600}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1EEF3963-BA4D-4793-B866-C1350C9CA600}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1EEF3963-BA4D-4793-B866-C1350C9CA600}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30B0D4E1-2A4D-4524-9CAC-EEE7CD7B826F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30B0D4E1-2A4D-4524-9CAC-EEE7CD7B826F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30B0D4E1-2A4D-4524-9CAC-EEE7CD7B826F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30B0D4E1-2A4D-4524-9CAC-EEE7CD7B826F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F938D3A3-2328-49BD-9CF4-EE5D6B238396}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F938D3A3-2328-49BD-9CF4-EE5D6B238396}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F938D3A3-2328-49BD-9CF4-EE5D6B238396}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F938D3A3-2328-49BD-9CF4-EE5D6B238396}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B73E453-2DDF-4784-971E-84017BC7F976}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B73E453-2DDF-4784-971E-84017BC7F976}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B73E453-2DDF-4784-971E-84017BC7F976}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B73E453-2DDF-4784-971E-84017BC7F976}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6E4E28B-55AF-484F-8408-871F024E01C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6E4E28B-55AF-484F-8408-871F024E01C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6E4E28B-55AF-484F-8408-871F024E01C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6E4E28B-55AF-484F-8408-871F024E01C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32F7FBE8-B9E6-4973-AA8D-5DF12617EAA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32F7FBE8-B9E6-4973-AA8D-5DF12617EAA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32F7FBE8-B9E6-4973-AA8D-5DF12617EAA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32F7FBE8-B9E6-4973-AA8D-5DF12617EAA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{710BD24E-2349-465C-BF57-A81199935D7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{710BD24E-2349-465C-BF57-A81199935D7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{710BD24E-2349-465C-BF57-A81199935D7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{710BD24E-2349-465C-BF57-A81199935D7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF8BA450-83BE-465E-B0B9-BF9B82B9A599}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF8BA450-83BE-465E-B0B9-BF9B82B9A599}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF8BA450-83BE-465E-B0B9-BF9B82B9A599}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF8BA450-83BE-465E-B0B9-BF9B82B9A599}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5BADE86-C64A-4C11-8FCD-C071E620DC74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5BADE86-C64A-4C11-8FCD-C071E620DC74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5BADE86-C64A-4C11-8FCD-C071E620DC74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5BADE86-C64A-4C11-8FCD-C071E620DC74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D953FCB2-1730-4E7A-9990-92ACA6FBB1E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D953FCB2-1730-4E7A-9990-92ACA6FBB1E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D953FCB2-1730-4E7A-9990-92ACA6FBB1E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D953FCB2-1730-4E7A-9990-92ACA6FBB1E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{5A0DD8B3-430C-43AC-9A6E-21F4BD251A83} = {4D6EA49F-7F00-438E-87E1-4604B109EA5F}
 		{06CF67D8-4B76-4433-9FB7-0842629AD47D} = {6573E93C-D6D5-4178-ADDA-DA09C3EEC56B}
+		{30B0D4E1-2A4D-4524-9CAC-EEE7CD7B826F} = {5445CA39-70C2-4AEE-81AF-301E80DCBAC6}
+		{F938D3A3-2328-49BD-9CF4-EE5D6B238396} = {5445CA39-70C2-4AEE-81AF-301E80DCBAC6}
+		{9B73E453-2DDF-4784-971E-84017BC7F976} = {4D6EA49F-7F00-438E-87E1-4604B109EA5F}
+		{D6E4E28B-55AF-484F-8408-871F024E01C1} = {DDFE4B0F-61F9-49CC-A032-8F876B9D4F86}
+		{32F7FBE8-B9E6-4973-AA8D-5DF12617EAA6} = {DDFE4B0F-61F9-49CC-A032-8F876B9D4F86}
+		{710BD24E-2349-465C-BF57-A81199935D7E} = {DDFE4B0F-61F9-49CC-A032-8F876B9D4F86}
+		{EF8BA450-83BE-465E-B0B9-BF9B82B9A599} = {DDFE4B0F-61F9-49CC-A032-8F876B9D4F86}
+		{E5BADE86-C64A-4C11-8FCD-C071E620DC74} = {DDFE4B0F-61F9-49CC-A032-8F876B9D4F86}
+		{D953FCB2-1730-4E7A-9990-92ACA6FBB1E2} = {DDFE4B0F-61F9-49CC-A032-8F876B9D4F86}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F2C53535-27EF-45EA-BE1C-7AA01125FA2B}
 	EndGlobalSection
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 8
+		SccNumberOfProjects = 12
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = http://tfs.zmland.com:8080/tfs/zmland.com
 		SccLocalPath0 = .
 		SccProjectUniqueName1 = MoonSharp.Extensions\\MoonSharp.Extensions.csproj
 		SccProjectName1 = MoonSharp.Extensions
 		SccLocalPath1 = MoonSharp.Extensions
-		SccProjectUniqueName2 = MoonSharp.Extensions.WebSupport\\MoonSharp.Extensions.WebSupport.csproj
-		SccProjectName2 = MoonSharp.Extensions.WebSupport
-		SccLocalPath2 = MoonSharp.Extensions.WebSupport
-		SccProjectUniqueName3 = MoonSharp.Extensions.DateTimeSupport\\MoonSharp.Extensions.DateTimeSupport.csproj
-		SccProjectName3 = MoonSharp.Extensions.DateTimeSupport
-		SccLocalPath3 = MoonSharp.Extensions.DateTimeSupport
-		SccProjectUniqueName4 = MoonSharp.Extensions.ChineseCalendarSupport\\MoonSharp.Extensions.ChineseCalendarSupport.csproj
-		SccProjectName4 = MoonSharp.Extensions.ChineseCalendarSupport
-		SccLocalPath4 = MoonSharp.Extensions.ChineseCalendarSupport
-		SccProjectUniqueName5 = Samples.ConsoleAppCore\\ConsoleAppCore.csproj
+		SccProjectUniqueName2 = _private\\_ConsoleAppCore\\_ConsoleAppCore.csproj
+		SccProjectTopLevelParentUniqueName2 = MoonSharp.Extensions.sln
+		SccProjectName2 = _private/_ConsoleAppCore
+		SccLocalPath2 = _private\\_ConsoleAppCore
+		SccProjectUniqueName3 = UnitTests\\ArraySupportTest\\ArraySupportTest.csproj
+		SccProjectTopLevelParentUniqueName3 = MoonSharp.Extensions.sln
+		SccProjectName3 = UnitTests/ArraySupportTest
+		SccLocalPath3 = UnitTests\\ArraySupportTest
+		SccProjectUniqueName4 = UnitTests\\SecuritySupportTest\\SecuritySupportTest.csproj
+		SccProjectTopLevelParentUniqueName4 = MoonSharp.Extensions.sln
+		SccProjectName4 = UnitTests/SecuritySupportTest
+		SccLocalPath4 = UnitTests\\SecuritySupportTest
+		SccProjectUniqueName5 = Samples\\ConsoleAppCore\\ConsoleAppCore.csproj
 		SccProjectTopLevelParentUniqueName5 = MoonSharp.Extensions.sln
-		SccProjectName5 = Samples.ConsoleAppCore
-		SccLocalPath5 = Samples.ConsoleAppCore
-		SccProjectUniqueName6 = _private\\_ConsoleAppCore\\_ConsoleAppCore.csproj
+		SccProjectName5 = Samples/ConsoleAppCore
+		SccLocalPath5 = Samples\\ConsoleAppCore
+		SccProjectUniqueName6 = MoonSharp.Com\\ArraySupport\\ArraySupport.csproj
 		SccProjectTopLevelParentUniqueName6 = MoonSharp.Extensions.sln
-		SccProjectName6 = _private/_ConsoleAppCore
-		SccLocalPath6 = _private\\_ConsoleAppCore
-		SccProjectUniqueName7 = MoonSharp.Extensions.EmailSupport\\MoonSharp.Extensions.EmailSupport.csproj
-		SccProjectName7 = MoonSharp.Extensions.EmailSupport
-		SccLocalPath7 = MoonSharp.Extensions.EmailSupport
+		SccProjectName6 = MoonSharp.Com/ArraySupport
+		SccLocalPath6 = MoonSharp.Com\\ArraySupport
+		SccProjectUniqueName7 = MoonSharp.Com\\ChineseCalendarSupport\\ChineseCalendarSupport.csproj
+		SccProjectTopLevelParentUniqueName7 = MoonSharp.Extensions.sln
+		SccProjectName7 = MoonSharp.Com/ChineseCalendarSupport
+		SccLocalPath7 = MoonSharp.Com\\ChineseCalendarSupport
+		SccProjectUniqueName8 = MoonSharp.Com\\DateTimeSupport\\DateTimeSupport.csproj
+		SccProjectTopLevelParentUniqueName8 = MoonSharp.Extensions.sln
+		SccProjectName8 = MoonSharp.Com/DateTimeSupport
+		SccLocalPath8 = MoonSharp.Com\\DateTimeSupport
+		SccProjectUniqueName9 = MoonSharp.Com\\EmailSupport\\EmailSupport.csproj
+		SccProjectTopLevelParentUniqueName9 = MoonSharp.Extensions.sln
+		SccProjectName9 = MoonSharp.Com/EmailSupport
+		SccLocalPath9 = MoonSharp.Com\\EmailSupport
+		SccProjectUniqueName10 = MoonSharp.Com\\SecuritySupport\\SecuritySupport.csproj
+		SccProjectTopLevelParentUniqueName10 = MoonSharp.Extensions.sln
+		SccProjectName10 = MoonSharp.Com/SecuritySupport
+		SccLocalPath10 = MoonSharp.Com\\SecuritySupport
+		SccProjectUniqueName11 = MoonSharp.Com\\WebSupport\\WebSupport.csproj
+		SccProjectTopLevelParentUniqueName11 = MoonSharp.Extensions.sln
+		SccProjectName11 = MoonSharp.Com/WebSupport
+		SccLocalPath11 = MoonSharp.Com\\WebSupport
 	EndGlobalSection
 EndGlobal

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace MoonSharp.Extensions
 {
@@ -9,7 +8,7 @@ namespace MoonSharp.Extensions
         public static string Get(Dictionary<string, object> configTable, string key, string @default)
         {
             var value = configTable.ContainsKey(key) ? configTable[key] : @default;
-            return value.ToString();
+            return value as string;
         }
 
         public static T Get<T>(Dictionary<string, object> configTable, string key, T @default)

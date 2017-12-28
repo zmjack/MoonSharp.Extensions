@@ -1,11 +1,8 @@
-﻿using MoonSharp.Interpreter;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace MoonSharp.Extensions
 {
@@ -58,17 +55,24 @@ namespace MoonSharp.Extensions
             return stringBuilder.ToString();
         }
 
-        public string DumpMethod(string methodName, string culture)
+        public string DumpMethod(string methodName, string culture= null)
         {
+            if (culture == null)
+                culture = CultureInfo.CurrentUICulture.ToString();
+
             var method = GetType().GetMethod(methodName, FindBindingFlags);
             return Dump(Get_Attribute_ReflectObject(method, culture));
         }
 
-        public string DumpSupport(string culture)
+        public string DumpSupport(string culture = null)
         {
+            if (culture == null)
+                culture = CultureInfo.CurrentUICulture.ToString();
+
             var definitions = EnumMethodDefinitions(culture);
             var stringBuilder = new StringBuilder(256);
 
+            stringBuilder.AppendLine(GetType().Name + " Functions:\r\n");
             foreach (var definition in definitions)
             {
                 stringBuilder.Append(Dump(definition));
@@ -76,17 +80,6 @@ namespace MoonSharp.Extensions
             stringBuilder.AppendLine();
 
             return stringBuilder.ToString();
-        }
-
-        public string Dump(string methodName = null)
-        {
-            var culture = CultureInfo.CurrentUICulture.ToString();
-
-            if (string.IsNullOrEmpty(methodName))
-            {
-                return GetType().Name + " Functions:\r\n" + DumpSupport(culture);
-            }
-            else return DumpMethod(methodName, culture);
         }
 
     }

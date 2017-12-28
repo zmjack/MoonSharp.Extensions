@@ -11,15 +11,17 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>zmjack</Authors>
-    <Version>1.0.4</Version>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <LangVersion>default</LangVersion>
+    <Version>0.0.0.1</Version>
+    <RootNamespace>MoonSharp.Extensions</RootNamespace>
+    <AssemblyName>MoonSharp.Com.WebSupport</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MoonSharp" Version="2.0.0" />
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="4.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\MoonSharp.Extensions\MoonSharp.Extensions.csproj" />
   </ItemGroup>
 
 </Project>

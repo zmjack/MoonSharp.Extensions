@@ -11,11 +11,14 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>zmjack</Authors>
-    <Version>1.0.3</Version>
+    <Version>0.0.0.1</Version>
+    <AssemblyName>MoonSharp.Com.ChineseCalendarSupport</AssemblyName>
+    <RootNamespace>MoonSharp.Extensions</RootNamespace>
+    <Company>zmjack</Company>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MoonSharp.Extensions\MoonSharp.Extensions.csproj" />
+    <ProjectReference Include="..\..\MoonSharp.Extensions\MoonSharp.Extensions.csproj" />
   </ItemGroup>
 
 </Project>

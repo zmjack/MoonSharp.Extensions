@@ -1,22 +1,18 @@
 ﻿using MoonSharp.Interpreter;
 using System;
-using System.Collections.Generic;
-using System.Globalization;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace MoonSharp.Extensions
 {
     public static class ScriptEx
     {
-        public static DynValue CallFunction(this Script @this, string function, params object[] args)
+        public static DynValue LCall(this Script @this, string function, params object[] args)
         {
             return @this.Call(@this.Globals[function], args);
         }
 
-        public static DynValue Var(this Script @this, string var)
+        public static DynValue LVar(this Script @this, string var)
         {
             return @this.Globals.Pairs.FirstOrDefault(a => a.Key.String == var).Value;
         }
@@ -34,22 +30,13 @@ namespace MoonSharp.Extensions
         public static void DumpSupport<TLuaSupport>(this Script @this, string culture = null)
             where TLuaSupport : LuaSupport, new()
         {
-            var supportInstance = new TLuaSupport();
-            if (culture == null)
-                culture = CultureInfo.CurrentUICulture.ToString();
-
-            Console.WriteLine(typeof(TLuaSupport).Name + " Functions:");
-            Console.Write(supportInstance.DumpSupport(culture));
+            Console.Write(new TLuaSupport().DumpSupport(culture));
         }
 
         public static void DumpMethod<TLuaSupport>(this Script @this, string methodName, string culture = null)
             where TLuaSupport : LuaSupport, new()
         {
-            var supportInstance = new TLuaSupport();
-            if (culture == null)
-                culture = CultureInfo.CurrentUICulture.ToString();
-
-            Console.Write(supportInstance.DumpMethod(methodName, culture));
+            Console.Write(new TLuaSupport().DumpMethod(methodName, culture));
         }
 
     }

@@ -9,13 +9,16 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>MoonSharp.Extensions</RootNamespace>
+    <Version>0.0.0.1</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>zmjack</Authors>
-    <Version>1.0.3</Version>
+    <Company>zmjack</Company>
+    <AssemblyName>MoonSharp.Com.EmailSupport</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MoonSharp.Extensions\MoonSharp.Extensions.csproj" />
+    <ProjectReference Include="..\..\MoonSharp.Extensions\MoonSharp.Extensions.csproj" />
   </ItemGroup>
 
 </Project>

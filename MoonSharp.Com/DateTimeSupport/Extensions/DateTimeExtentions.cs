@@ -2,7 +2,7 @@
 
 namespace MoonSharp.Extensions
 {
-    public static class DateTimeEx
+    public static class DateTimeSupport_DateTimeExtentions
     {
         /// <summary>
         /// 转换间隔天数按周数的往前或往后计算的天数值。
