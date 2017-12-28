@@ -10,11 +10,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>MoonSharp.Extensions</RootNamespace>
-<<<<<<< HEAD:MoonSharp.Com/EmailSupport/EmailSupport.csproj
     <Version>0.0.0.1</Version>
-=======
-    <Version>1.0.3.1</Version>
->>>>>>> 86c3ca7962bb491a8be28253b0613fce7402639d:MoonSharp.Extensions.EmailSupport/MoonSharp.Extensions.EmailSupport.csproj
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>zmjack</Authors>
     <Company>zmjack</Company>

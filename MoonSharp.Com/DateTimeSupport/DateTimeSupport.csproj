@@ -11,13 +11,9 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>zmjack</Authors>
-<<<<<<< HEAD:MoonSharp.Com/DateTimeSupport/DateTimeSupport.csproj
     <Version>0.0.0.1</Version>
     <RootNamespace>MoonSharp.Extensions</RootNamespace>
     <AssemblyName>MoonSharp.Com.DateTimeSupport</AssemblyName>
-=======
-    <Version>1.0.3.1</Version>
->>>>>>> 86c3ca7962bb491a8be28253b0613fce7402639d:MoonSharp.Extensions.DateTimeSupport/MoonSharp.Extensions.DateTimeSupport.csproj
   </PropertyGroup>
 
   <ItemGroup>
