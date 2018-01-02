@@ -14,6 +14,7 @@
     <Version>0.0.0.1</Version>
     <RootNamespace>MoonSharp.Extensions</RootNamespace>
     <AssemblyName>MoonSharp.Com.DateTimeSupport</AssemblyName>
+    <PackageProjectUrl>https://github.com/zmjack/MoonSharp.Extensions</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>

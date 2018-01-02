@@ -15,6 +15,7 @@
     <Authors>zmjack</Authors>
     <Company>zmjack</Company>
     <AssemblyName>MoonSharp.Com.EmailSupport</AssemblyName>
+    <PackageProjectUrl>https://github.com/zmjack/MoonSharp.Extensions</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>

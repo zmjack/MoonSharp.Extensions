@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2003
+VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoonSharp.Extensions", "MoonSharp.Extensions\MoonSharp.Extensions.csproj", "{6C02AC8D-FEAB-4746-AFA6-1F9A7BC23727}"
 EndProject
@@ -32,6 +32,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SecuritySupport", "MoonSharp.Com\SecuritySupport\SecuritySupport.csproj", "{E5BADE86-C64A-4C11-8FCD-C071E620DC74}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebSupport", "MoonSharp.Com\WebSupport\WebSupport.csproj", "{D953FCB2-1730-4E7A-9990-92ACA6FBB1E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_ConsoleApp", "_private\_ConsoleApp\_ConsoleApp.csproj", "{8AC1EAD4-50AC-41A1-AFB6-B856E45CD99F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -83,6 +85,10 @@ Global
 		{D953FCB2-1730-4E7A-9990-92ACA6FBB1E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D953FCB2-1730-4E7A-9990-92ACA6FBB1E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D953FCB2-1730-4E7A-9990-92ACA6FBB1E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AC1EAD4-50AC-41A1-AFB6-B856E45CD99F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AC1EAD4-50AC-41A1-AFB6-B856E45CD99F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AC1EAD4-50AC-41A1-AFB6-B856E45CD99F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AC1EAD4-50AC-41A1-AFB6-B856E45CD99F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -98,12 +104,13 @@ Global
 		{EF8BA450-83BE-465E-B0B9-BF9B82B9A599} = {DDFE4B0F-61F9-49CC-A032-8F876B9D4F86}
 		{E5BADE86-C64A-4C11-8FCD-C071E620DC74} = {DDFE4B0F-61F9-49CC-A032-8F876B9D4F86}
 		{D953FCB2-1730-4E7A-9990-92ACA6FBB1E2} = {DDFE4B0F-61F9-49CC-A032-8F876B9D4F86}
+		{8AC1EAD4-50AC-41A1-AFB6-B856E45CD99F} = {6573E93C-D6D5-4178-ADDA-DA09C3EEC56B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F2C53535-27EF-45EA-BE1C-7AA01125FA2B}
 	EndGlobalSection
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 12
+		SccNumberOfProjects = 13
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = http://tfs.zmland.com:8080/tfs/zmland.com
 		SccLocalPath0 = .
@@ -150,5 +157,9 @@ Global
 		SccProjectTopLevelParentUniqueName11 = MoonSharp.Extensions.sln
 		SccProjectName11 = MoonSharp.Com/WebSupport
 		SccLocalPath11 = MoonSharp.Com\\WebSupport
+		SccProjectUniqueName12 = _private\\_ConsoleApp\\_ConsoleApp.csproj
+		SccProjectTopLevelParentUniqueName12 = MoonSharp.Extensions.sln
+		SccProjectName12 = _private/_ConsoleApp
+		SccLocalPath12 = _private\\_ConsoleApp
 	EndGlobalSection
 EndGlobal

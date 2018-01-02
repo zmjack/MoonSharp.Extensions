@@ -1,6 +1,8 @@
-﻿using System;
+﻿using MoonSharp.Interpreter;
+using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Text;
 using System.Web;
@@ -13,14 +15,12 @@ namespace MoonSharp.Extensions
         {
             public const string URL_ENCODED = "application/x-www-form-urlencoded";
             public const string FORM_DATA = "multipart/form-data";
-            public const string GET = "get";
-            public const string POST = "post";
+            public const string GET = "GET";
+            public const string POST = "POST";
 
-            public string Enctype = URL_ENCODED;
-            public string ContentType = null;
+            public string ContentType = URL_ENCODED;
             public string UserAgent = "";
-            public bool NoBody = false;
-            public string Method = "get";
+            public string Method = GET;
             public string Encoding = "utf-8";
             public string ProxyAddress = "";
             public string ProxyUsername = "";
@@ -29,11 +29,9 @@ namespace MoonSharp.Extensions
             public static explicit operator ConfigOption(Dictionary<string, object> dict)
             {
                 var instance = new ConfigOption();
-                instance.Enctype = Config.Get(dict, "enctype", instance.Enctype);
                 instance.ContentType = Config.Get(dict, "content-type", instance.ContentType);
                 instance.UserAgent = Config.Get(dict, "user-agent", instance.UserAgent);
-                instance.NoBody = Config.Get(dict, "nobody", instance.NoBody);
-                instance.Method = Config.Get(dict, "method", instance.Method);
+                instance.Method = Config.Get(dict, "method", instance.Method).ToUpper();
                 instance.Encoding = Config.Get(dict, "encoding", instance.Encoding);
                 instance.ProxyAddress = Config.Get(dict, "proxy_address", instance.ProxyAddress);
                 instance.ProxyUsername = Config.Get(dict, "proxy_username", instance.ProxyUsername);
@@ -52,29 +50,50 @@ namespace MoonSharp.Extensions
                 var request = (HttpWebRequest)WebRequest.Create(new Uri(url));
                 byte[] requestBody;
 
-                if (config.Enctype != "multipart/form-data")
+                switch (config.ContentType)
                 {
-                    //Format: application/x-www-form-urlencoded
-                    var postDataList = new List<string>();
-                    foreach (var data in updata)
-                    {
-                        postDataList.Add($"{data.Key}={HttpUtility.UrlEncode(data.Value.ToString())}");
-                    }
-                    requestBody = Encoding.UTF8.GetBytes(string.Join("&", postDataList));
-                }
-                else
-                {
-                    //Format: multipart/form-data
-                    var formData = new HttpFormData();
-                    foreach (var data in updata)
-                    {
-                        formData.AddData(data.Key, data.Value.ToString());
-                    }
-                    requestBody = formData;
+                    default:
+                    case ConfigOption.URL_ENCODED:
+                        var postDataList = new List<string>();
+                        foreach (var data in updata)
+                        {
+                            IEnumerable<string> values = new string[0];
+
+                            if (data.Value is Table)
+                            {
+                                values = (data.Value as Table).Values.AsObjects<string>();
+                            }
+                            else if (data.Value is Array)
+                            {
+                                var list = new List<string>();
+                                foreach (var value in data.Value as Array)
+                                    list.Add(value.ToString());
+                                values = list.ToArray();
+                            }
+
+                            if (values.Any())
+                            {
+                                var i = 0;
+                                foreach (var value in values)
+                                {
+                                    postDataList.Add($"{data.Key}[{i++}]={HttpUtility.UrlEncode(value)}");
+                                }
+                            }
+                            else postDataList.Add($"{data.Key}={HttpUtility.UrlEncode(data.Value.ToString())}");
+                        }
+                        requestBody = Encoding.UTF8.GetBytes(string.Join("&", postDataList));
+                        break;
+
+                    case ConfigOption.FORM_DATA:
+                        var formData = new HttpFormData();
+                        foreach (var data in updata)
+                        {
+                            formData.AddData(data.Key, data.Value.ToString());
+                        }
+                        requestBody = formData;
+                        break;
                 }
 
-                if (!config.NoBody)
-                    request.ContentLength = requestBody.Length;
                 request.ContentType = config.ContentType;
                 request.UserAgent = config.UserAgent;
                 request.Method = config.Method;
@@ -92,10 +111,11 @@ namespace MoonSharp.Extensions
                         }
                     };
                 }
-
-                //Invoke
-                if (config.Method == "post" && !config.NoBody)
+                if (config.Method == ConfigOption.POST)
+                {
+                    request.ContentLength = requestBody.Length;
                     request.GetRequestStream().Write(requestBody, 0, requestBody.Length);
+                }
 
                 using (var response = request.GetResponse())
                 {

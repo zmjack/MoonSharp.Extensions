@@ -15,6 +15,7 @@
     <AssemblyName>MoonSharp.Com.ChineseCalendarSupport</AssemblyName>
     <RootNamespace>MoonSharp.Extensions</RootNamespace>
     <Company>zmjack</Company>
+    <PackageProjectUrl>https://github.com/zmjack/MoonSharp.Extensions</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
